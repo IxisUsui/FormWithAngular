@@ -1,0 +1,174 @@
+
+:host{
+  display: flex;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.card{
+  background-color: rgba(31, 41, 55, 1);
+  margin-top: 5%;
+  padding: 1% 25% 2% 25%;
+  border-radius: 10px;
+  font-family: "Verdana", sans-serif;
+  text-align: start;
+}
+
+.textColumn{
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 70%;
+  padding: 2%;
+}
+
+.inputColumn{
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 70%;
+  padding: 2%;
+  margin-left: 5%;
+}
+
+.columnBox{
+  display: flex;
+  flex-direction: row;
+}
+
+.logo{
+  margin-top: 20%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: "Book Antiqua", sans-serif !important;
+  h1{
+    color: rgb(41, 112, 70);
+    margin-right: 10px;
+    margin-left: 10px;
+
+  }
+  h2{
+    color: rgba(74, 223, 134, 1);
+  }
+}
+header{
+  height: 12%;
+  background-color: #273549;
+  position: absolute;
+  width: 100%;
+}
+.mainImg{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 15%;
+  height: 75%;
+}
+
+.slaveImg{
+  margin-top: 40%;
+  width: 50%;
+  height: 10%;
+}
+
+
+input{
+  background-color: rgba(39, 53, 73, 1);
+  border: 0;
+  padding: 4%;
+  width: 90%;
+  color: rgba(74, 223, 134, 1);
+  border-radius: 4px;
+  margin: 4%;
+  font-size: 16px;
+}
+
+
+input:focus{
+  border: 2px solid rgb(74, 223, 134);
+  outline: none !important;
+}
+
+input:read-only{
+  border: 0;
+}
+
+h1{
+  margin-top: 5%;
+  color: white;
+}
+h2{
+  color: white;
+}
+h4{
+  color: rgba(74, 223, 134, 1);
+  margin-bottom: 5%;
+}
+h5{
+  color: rgba(74, 223, 134, 1);
+  margin-bottom: 5%;
+}
+
+hr{
+  margin-top: 5%;
+  margin-bottom: 10%;
+  color: rgba(47, 62, 83, 1)
+}
+
+.alert{
+  color: red;
+  margin-left: 5%;
+}
+
+.output{
+  white-space: pre-wrap;
+  margin-top: 5%;
+  padding: 5%;
+  background-color: rgba(39, 53, 73, 1);
+  border-radius: 4px;
+  text-align: start;
+  color: rgba(74, 223, 134, 1);
+}
+
+button{
+  position: relative;
+  margin-left: 65%;
+  margin-top: 7%;
+  padding: 2% 5%;
+  border: 1px solid rgba(74, 223, 134, 1);
+  border-radius: 4px;
+  background-color:rgba(74, 223, 134, 1);
+  color: white;
+  font-weight: bold;
+  font-size: 3dvh;
+}
+
+button:active{
+  border: 1px solid rgb(61, 143, 94);
+  background-color:rgb(61, 143, 94);
+  color: #b4b3b3;
+}
+
+button:disabled{
+  border: 1px solid rgba(61, 143, 94, 0.76);
+  background-color: rgba(61, 143, 94, 0.76);
+  color: #b4b3b3;
+}
+
+button:hover{
+  color: #bdbcbc;
+}
+
+/////////////////////////////////////////angular material elements///////////////////////////////////////////////////////////////////////
+
+.slider{
+  margin: 3% 20% 10% 50%;
+  ::ng-deep .mat-mdc-slide-toggle .mdc-label {
+    color: white;
+    font-size: 17px;
+  }
+}
+
+::ng-deep .mat-mdc-radio-button .mdc-label{
+  color: white !important;
+  font-size: 20px;
+  margin-right: 15px;
+}

@@ -1,0 +1,97 @@
+<body>
+<head>
+  <base href="https://localhost:4200/">
+</head>
+<header>
+  <img class="mainImg" src="assets/lorem-high-resolution-logo(1).png" alt="logo2">
+</header>
+<div class="card">
+  <div class="columnBox">
+    <div class="textColumn">
+      <h1>Formular</h1>
+      <h4>Example form in Angular </h4>
+      <hr>
+      <h2>Lorem Ipsum</h2>
+      <h5>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra dignissim enim, vitae venenatis lorem tempus vel.
+        Nullam dignissim leo ac ligula consectetur, in consectetur nulla malesuada.
+      </h5>
+      <h5>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vestibulum pharetra dignissim enim, vitae venenatis lorem tempus vel. Nullam dignissim leo ac ligula consectetur, in consectetur nulla malesuada.
+      </h5>
+      <img class="slaveImg" src="assets/lorem-high-resolution-logo.png" alt="Logo1">
+    </div>
+    <div>
+
+    </div>
+    <div class="inputColumn">
+      <div class="slider">
+        <mat-slide-toggle id="slider" class="slider" (click)="sliderChange()" ><span>{{sliderChecked?'Online':'Offline'}}</span></mat-slide-toggle>
+      </div>
+      <form [formGroup]="submitForm" (ngSubmit)="submitNewUser()" >
+        <input
+          id="name"
+          placeholder="Name"
+          formControlName="name"
+          [readonly]="!isSubmitMessageBtn"
+        />
+        <div
+          *ngIf="getName?.invalid && (getName?.dirty || getName?.touched)"
+          class="alert"
+        >
+          <div *ngIf="getName?.errors?.['required']">Name is required.</div>
+        </div>
+
+        <input
+          id="lastName"
+          placeholder="Last name"
+          formControlName="lastName"
+          [readonly]="!isSubmitMessageBtn"
+        />
+        <div
+          *ngIf="getLastName?.invalid && (getLastName?.dirty || getLastName?.touched)"
+          class="alert"
+        >
+          <div *ngIf="getLastName?.errors?.['required']">Last name is required.</div>
+        </div>
+
+        <input
+          id="email"
+          placeholder="E-mail"
+          formControlName="email"
+          [readonly]="!isSubmitMessageBtn"
+        />
+        <div
+          *ngIf="getEmail?.invalid && (getEmail?.dirty || getEmail?.touched)"
+          class="alert"
+        >
+          <div *ngIf="getEmail?.errors?.['email']">Email must be valid</div>
+          <div *ngIf="getEmail?.errors?.['required']">Email is required.</div>
+        </div>
+
+        <input
+          id="phone"
+          placeholder="Phone"
+          formControlName="phone"
+          [readonly]="!isSubmitMessageBtn"
+        />
+        <div
+          *ngIf="getPhone?.invalid && (getPhone?.dirty || getPhone?.touched)"
+          class="alert"
+        >
+          <div *ngIf="getPhone?.errors?.['phone']">Phone must be valid</div>
+          <div *ngIf="getPhone?.errors?.['required']">Phone is required.</div>
+        </div>
+
+
+        <input id="randomId1" placeholder="Lorem ipsum"/>
+        <input id="randomId2" placeholder="Lorem ipsum"/>
+        <input id="randomId3" placeholder="Lorem ipsum"/>
+        <input id="randomId4" placeholder="Lorem ipsum"/>
+        <button type="submit" [disabled]="submitForm.invalid || !isSubmitMessageBtn">{{isSubmitMessageBtn ? "Submit" : "Success!"}}</button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
