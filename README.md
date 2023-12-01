@@ -1,6 +1,6 @@
 # FormWithAngular
 
-![plot](.\frontend\src\assets\lorem-high-resolution-logo.jpg) <!-- Replace with your logo -->
+![plot](frontend/src/assets/lorem-high-resolution-logo-main.png) <!-- Replace with your logo -->
 
 Project focus on a simple form-checking website where users can register through a straightforward form. The main objective behind this project was to learn Angular.
 
@@ -53,6 +53,6 @@ Project focus on a simple form-checking website where users can register through
 
   Contributions are welcome! Feel free to open issues or submit pull requests to improve this project.
   
-###License
+### License
 
 This project is licensed under the MIT License.
